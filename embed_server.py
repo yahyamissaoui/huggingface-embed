@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 print("Loading model...")  # Add this
-model = SentenceTransformer('all-mpnet-base-v2')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 print("Model loaded.")
 
 

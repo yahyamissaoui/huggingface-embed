@@ -6,11 +6,14 @@ import os
 app = Flask(__name__)
 CORS(app)
 
+print("Loading model...")  # Add this
 model = SentenceTransformer('all-mpnet-base-v2')
+print("Model loaded.")
 
 
 @app.route('/embed', methods=['POST'])
 def embed():
+    print("Received embedding request")
     data = request.json
     text = data.get("text")
 
